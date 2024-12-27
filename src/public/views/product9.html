@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo/logo.jpg" type="image/x-icon">
+    <title>Matt’s Shop</title>
+    <link rel="stylesheet" href="/src/public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="producto-detalle">
+            <div class="producto-imagen">
+                <img src="/src/public/img/product/ropa/mattsshop9000 (6).jpg" alt="Producto">
+            </div>
+            
+            <div class="producto-info">
+                <h1 class="producto-titulo" id="nombreProducto">Conjunto Short y Pullover Paris</h1>
+                <p class="producto-tipo">Tipo: Ropa</p>
+                
+                <div class="producto-descripcion">
+                    <h3>Descripción:</h3>
+                    <p>Conjunto de short y pullover de Paris</p>
+                </div>
+
+                <div class="precio-container">
+                    <span class="producto-precio">$9000</span>
+                </div>
+
+                <div class="selector-talla">
+                    <h3>Talla:</h3>
+                    <div class="tallas">
+                        <button class="talla-btn">S</button>
+                        <button class="talla-btn seleccionada">M</button>
+                        <button class="talla-btn">L</button>
+                        <button class="talla-btn">XL</button>
+                    </div>
+                </div>
+
+                <div class="cantidad-selector">
+                    <h3>Cantidad:</h3>
+                    <button class="cantidad-btn" onclick="decrementarCantidad()">-</button>
+                    <span class="cantidad-numero" id="cantidad">1</span>
+                    <button class="cantidad-btn" onclick="incrementarCantidad()">+</button>
+                </div>
+
+                <p class="stock-info">Stock disponible: 1 unidades</p>
+
+                <button class="btn-agregar" onclick="mostrarFormulario()">Comprar ahora</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal del formulario -->
+    <div id="modalFormulario" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarFormulario()">&times;</span>
+            <h2>Complete sus datos para la compra</h2>
+            <form id="formularioCompra" onsubmit="enviarPedido(event)">
+                <div class="form-grupo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="direccion">Dirección de entrega:</label>
+                    <textarea id="direccion" required></textarea>
+                </div>
+                <div class="form-grupo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" required>
+                </div>
+                <button type="submit" class="btn-enviar">Confirmar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/src/public/js/script.js"></script>
+    <script src="/src/public/js/recomendaciones.js"></script>
+</body>
+</html>
