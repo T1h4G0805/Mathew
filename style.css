@@ -58,8 +58,7 @@ header {
 
 .container_items {
     display: flex;
-    justify-content: flex-start; /* Cambiado a flex-start para mejor scroll */
-    gap: 0.5rem;
+    justify-content: center;
 }
 
 .enlaces_nav {
@@ -69,7 +68,6 @@ header {
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
 }
-
 
 .enlaces_nav:hover {
     color: var(--color-accent);
@@ -165,28 +163,13 @@ footer img:hover {
 }
 
 @media (max-width: 480px) {
-    .nav_bar {
-        padding: 0.5rem;
-    }
-
     .container_items {
-        overflow-x: auto; /* Habilita el scroll horizontal */
-        -webkit-overflow-scrolling: touch; /* Hace el scroll más suave en iOS */
-        scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
-        -ms-overflow-style: none; /* Oculta la barra de scroll en IE/Edge */
-        white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
-        padding: 0.5rem;
-    }
-
-    /* Oculta la barra de scroll en Chrome/Safari */
-    .container_items::-webkit-scrollbar {
-        display: none;
+        overflow-x: auto;
+        padding: 0 1rem;
     }
 
     .enlaces_nav {
-        font-size: 0.9rem;
-        padding: 0.3rem 0.8rem;
-        display: inline-block;
+        white-space: nowrap;
     }
 }
 
