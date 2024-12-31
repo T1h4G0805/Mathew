@@ -46,7 +46,6 @@ header {
     border-radius: 50%;
 }
 
-/* Navegación */
 .nav_bar {
     background-color: var(--color-secondary);
     padding: 1rem;
@@ -59,6 +58,8 @@ header {
 .container_items {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+    gap: 0.5rem; /* Añade espacio entre los elementos cuando se envuelven */
 }
 
 .enlaces_nav {
@@ -164,12 +165,13 @@ footer img:hover {
 
 @media (max-width: 480px) {
     .container_items {
-        overflow-x: auto;
-        padding: 0 1rem;
+        justify-content: center; /* Centra los elementos */
+        padding: 0.5rem; /* Reduce el padding */
     }
 
     .enlaces_nav {
-        white-space: nowrap;
+        font-size: 0.9rem; /* Reduce ligeramente el tamaño de la fuente */
+        padding: 0.3rem 0.8rem; /* Reduce el padding de los enlaces */
     }
 }
 
